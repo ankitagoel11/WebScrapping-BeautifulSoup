@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      
+    </div>
+    
+    <div class="row">
+        
+      <div class="col-md-12">
+    {% for datum in mars_datasets %}
+
+    <h1>Latest MARS News </h1>
+    <p class="card-text"> {{ datum.title }} <br> {{ datum.para }}</p>
+
+    </div>
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+
+    <h2> <b>Featured Mars Image </b></h2>
+    <img src= {{ datum.image }} class="img-fluid" width="500" height="500" >
+
+    </div>
+      <div class="col-md-6">
+
+    <h4> <b>Current Weather or Mars </b> </h4>
+    <p class="card-text"> {{ datum.tweet_response}}</p>
+    
+
+    {% endfor %}
+
+    <h4> <b> Mars Facts </b></h4>
+    {{table|safe}}
+    
+    </div>
+    
+  </div>
+
+</body>
+</html>
