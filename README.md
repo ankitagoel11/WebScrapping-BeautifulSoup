@@ -1,1 +1,1 @@
-# WebScrapping-Using BeautifulSoup Python Library
+# Web Scrapping Project Using Python's BeautifulSoup Library
